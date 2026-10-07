@@ -1,0 +1,27 @@
+{
+  "name": "minilog",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "build:tests": "rollup -c ./tests/rollup.config.js",
+    "test": "npm run build:tests && node --test dist/tests/**/*.test.cjs"
+  },
+  "author": "Jesse Jenks",
+  "license": "AGPL-3.0-only",
+  "description": "A mini Prolog language",
+  "devDependencies": {
+    "@rollup/plugin-terser": "1.0.0",
+    "@rollup/plugin-typescript": "12.3.0",
+    "@types/node": "24.13.6",
+    "rollup": "4.63.3",
+    "tslib": "2.8.1",
+    "typescript": "6.0.3"
+  }
+}
